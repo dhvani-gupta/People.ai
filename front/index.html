@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload your resume</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 20px;
+    
+        }
+        body {
+        background-image: url("/home/dhvani/Desktop/BTP/library.jpg");
+        background-repeat: no-repeat;
+        background-size:cover;
+    } 
+        header {
+            background-color: rgba(233, 222, 222, 0.5);
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #090909;
+        }
+
+        #logo {
+            width: 200px;
+            height: 100px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: center; /* Center align the container */
+        }
+
+        h3 {
+            text-align: center; /* Align the heading to the left */
+        }
+
+        input[type="file"] {
+            margin-bottom: 10px;
+            font-size: 16px;
+            padding: 5px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center; /* Center align the buttons */
+            align-items: center; /* Vertically align the buttons */
+            gap: 10px; /* Add some spacing between the buttons */
+        }
+
+        button {
+            font-size: 16px;
+            padding: 5px;
+            width: 100%; /* Set the width to match the "Choose File" button */
+            background-color: #4CAF50; /* Set the background color of the button */
+            color: #fff; /* Set the text color of the button */
+            border: none; /* Remove the border */
+            cursor: pointer;
+        }
+        loading {
+            display: none; /* Initially hide the loading element */
+            text-align: center;
+        }
+
+        .loading img {
+            width: 50px;
+            height: 50px;
+        }
+        .form-container {
+            display: none; 
+            /* Initially hide the form container */
+        }
+        .form-container {
+        border: 1px solid #030303;
+        background-color : rgba(245, 233, 233, 0.5);
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+        .form-container form {
+            text-align: center;
+        }
+
+        .form-container input[type="radio"] {
+            margin: 10px;
+        }
+
+        .form-container input[type="text"] {
+            margin: 10px;
+            padding: 5px;
+        }
+
+        .form-container button {
+            margin: 10px;
+            padding: 5px 10px;
+        }
+        .form-box {
+        background-color: red; /* Set the background color to red */
+        padding: 10px;
+        border: 1px solid #ccc;
+        display: inline-block; 
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img id="logo.png" src="logo.png" alt="MIET Jammu">
+    <h1>Fitment Score Calculator</h1>    
+</header>
+<div class="container" id = "predcont">
+    <br>
+    <h1> Welcome to Model Institute Of Engineering and Technology, Jammu </h1>
+    <br>
+    <h3>Upload your Resume</h3>
+    <input type="file" id="resume" accept=".pdf">
+    <div class="button-container">
+        <button id="analyzeBtn">Analyze</button>
+    </div>
+    <div class="loading" id="loading" style="display: none;">
+        <img src="giphy.gif" alt="Loading">
+        <p>Loading...</p>
+    </div>
+    <div class="result" id="result"></div>
+    <div class="form-container" id="formContainer" style="display: none;">
+        <form id="inputForm">
+            <label>Select Gender:</label>
+            <input type="radio" name="gender" value="Male"> Male
+            <input type="radio" name="gender" value="Female"> Female
+            <br>
+            <label>PhD:</label>
+            <input type="radio" name="phd" value="Yes"> Yes
+            <input type="radio" name="phd" value="No"> No
+            <br>
+            <label>City of Residence:</label>
+            <input type="text" id="cityInput" name="city" placeholder="Enter your city">
+            <br>
+            <label>Experience (in years):</label>
+            <input type="text" id="experienceInput" name="experience" placeholder="Enter your experience">
+            <br>
+            <button type="submit">Submit</button>
+            <br>
+            <span id = "pred"></span>
+        </form>
+</div>
+
+<script src="showform.js"></script>
+
+</body>
+</html> 
+
